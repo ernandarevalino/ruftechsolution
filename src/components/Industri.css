@@ -1,0 +1,14 @@
+/* industri: diawali .c-industri supaya gaya tidak bocor ke komponen lain */
+.c-industri.ind { padding-block: clamp(64px, 8vw, 104px) 0; }
+.c-industri .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.c-industri .it { display: grid; gap: 10px; align-content: start; padding: 24px 24px 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); text-decoration: none; }
+.c-industri .ico { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(138,43,255,.14); color: var(--accent); margin-bottom: 4px; }
+.c-industri .ico svg { width: 22px; height: 22px; }
+.c-industri h3 { font-size: 19px; }
+.c-industri p { color: var(--muted); font-size: 15px; }
+.c-industri .sol { font-size: 13.5px; color: var(--ink); padding: 6px 10px; border-radius: 8px; background: rgba(255,255,255,.04); border: 1px dashed var(--line); justify-self: start; }
+.c-industri .go { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--accent); margin-top: 4px; }
+.c-industri .go svg { width: 15px; height: 15px; transition: transform .2s; }
+.c-industri .it:hover .go svg { transform: translateX(4px); }
+@media (max-width: 900px) { .c-industri .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .c-industri .grid { grid-template-columns: 1fr; } .c-industri .it { grid-template-columns: auto 1fr; column-gap: 14px; } .c-industri .ico { grid-row: span 2; } .c-industri .it > :not(.ico) { grid-column: 2; } }

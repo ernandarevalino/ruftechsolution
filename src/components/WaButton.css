@@ -1,0 +1,6 @@
+/* wabutton: diawali .c-wabutton supaya gaya tidak bocor ke komponen lain */
+.c-wabutton.fab { position: fixed; z-index: 45; right: calc(20px + env(safe-area-inset-right, 0px)); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); width: 60px; height: 60px; border-radius: 50%; background: var(--wa); display: grid; place-items: center; box-shadow: 0 12px 30px -6px rgba(37, 211, 102, .55); transition: transform .2s; isolation: isolate; }
+.c-wabutton.fab:hover { transform: scale(1.07); }
+.c-wabutton.fab svg { width: 30px; height: 30px; fill: #fff; }
+.c-wabutton.fab::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--wa); z-index: -1; animation: wabutton-ring 2.4s ease-out infinite; }
+@keyframes wabutton-ring { from { transform: scale(1); opacity: .55; } to { transform: scale(1.7); opacity: 0; } }

@@ -1,0 +1,3 @@
+/* notfound: diawali .c-notfound supaya gaya tidak bocor ke komponen lain */
+.c-notfound .nf { min-height: 70vh; display: grid; place-items: center; }
+.c-notfound .acts { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 32px; }

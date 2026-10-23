@@ -1,0 +1,17 @@
+/* karyadetail: diawali .c-karyadetail supaya gaya tidak bocor ke komponen lain */
+.c-karyadetail .hero-shot { max-width: 980px; }
+.c-karyadetail .clogo { display: inline-grid; place-items: center; margin-top: 22px; height: 76px; padding: 8px 14px; border-radius: 16px; background: var(--bg); box-shadow: 0 14px 34px -14px rgba(0,0,0,.7); }
+.c-karyadetail .clogo img { height: 60px; width: auto; max-width: 160px; object-fit: contain; }
+.c-karyadetail .cols { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: start; }
+.c-karyadetail .facts { position: sticky; top: 100px; display: grid; gap: 22px; }
+.c-karyadetail dl { margin: 0; display: grid; gap: 16px; }
+.c-karyadetail dt { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--dim); font-weight: 600; }
+.c-karyadetail dd { margin: 4px 0 0; font-size: 15.5px; }
+.c-karyadetail h4 { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--dim); font-weight: 600; }
+.c-karyadetail .prose { max-width: 66ch; }
+.c-karyadetail .prose h2:first-child { margin-top: 0; }
+.c-karyadetail .gal { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 56px; }
+.c-karyadetail .gal img { border-radius: 14px; border: 1px solid var(--line); width: 100%; }
+.c-karyadetail .nexthead { margin-bottom: 24px; }
+.c-karyadetail .nextone { max-width: 760px; }
+@media (max-width: 860px) { .c-karyadetail .cols { grid-template-columns: 1fr; } .c-karyadetail .facts { position: static; } .c-karyadetail .gal { grid-template-columns: 1fr; } }

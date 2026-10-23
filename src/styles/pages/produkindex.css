@@ -1,0 +1,15 @@
+/* produkindex: diawali .c-produkindex supaya gaya tidak bocor ke komponen lain */
+.c-produkindex .list { display: grid; gap: 20px; }
+.c-produkindex .prod { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(24px, 4vw, 48px); align-items: center; padding: clamp(22px, 3vw, 36px); text-decoration: none; }
+.c-produkindex .txt { display: grid; gap: 14px; align-content: start; }
+.c-produkindex .status { justify-self: start; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 999px; background: rgba(30,158,90,.16); color: #6ee0a4; }
+.c-produkindex .status.soon { background: rgba(183,140,255,.15); color: var(--accent); }
+.c-produkindex h2 { font-size: clamp(26px, 3.2vw, 36px); }
+.c-produkindex .txt p { color: var(--muted); }
+.c-produkindex ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15px; }
+.c-produkindex li { display: flex; gap: 10px; align-items: baseline; }
+.c-produkindex li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex: 0 0 auto; transform: translateY(-2px); }
+.c-produkindex .ask { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px 32px; padding: 28px 32px; border-style: dashed; }
+.c-produkindex .ask h3 { font-size: 20px; }
+.c-produkindex .ask p { color: var(--muted); margin-top: 6px; }
+@media (max-width: 860px) { .c-produkindex .prod { grid-template-columns: 1fr; } }

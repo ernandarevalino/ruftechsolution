@@ -1,0 +1,21 @@
+/* tentang: diawali .c-tentang supaya gaya tidak bocor ke komponen lain */
+.c-tentang .story { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 80px); align-items: center; }
+.c-tentang .logo-card { padding: clamp(28px, 5vw, 56px); background: #fff; }
+.c-tentang .prose h2:first-child { margin-top: 0; }
+.c-tentang .vals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.c-tentang .vals .card { padding: 28px; }
+.c-tentang .vals h3 { font-size: 20px; }
+.c-tentang .vals p { color: var(--muted); margin-top: 8px; }
+.c-tentang .hl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 28px 40px; align-items: center; padding: clamp(24px, 4vw, 40px); background: linear-gradient(140deg, rgba(35,80,176,.2), rgba(138,43,255,.1)); }
+.c-tentang .hl img { width: 220px; }
+.c-tentang .hl h3 { font-size: clamp(22px, 2.6vw, 28px); margin-top: 10px; }
+.c-tentang .hl p { color: var(--muted); margin-top: 10px; max-width: 60ch; }
+.c-tentang .center { text-align: center; }
+.c-tentang .fd { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 32px 48px; align-items: center; padding: clamp(24px, 4vw, 44px); background: linear-gradient(140deg, rgba(35,80,176,.2), rgba(138,43,255,.08)); }
+.c-tentang .fd-img { width: clamp(140px, 18vw, 220px); aspect-ratio: 1; border-radius: 24px; object-fit: cover; }
+.c-tentang .fd-ini { display: grid; place-items: center; font-size: 56px; font-weight: 700; background: linear-gradient(135deg, #2350b0, #8A2BFF); }
+.c-tentang .fd h2 { font-size: clamp(28px, 3.6vw, 40px); margin-top: 10px; }
+.c-tentang .role { color: var(--accent); font-weight: 600; margin-top: 6px; }
+.c-tentang .story { color: var(--muted); margin: 16px 0 22px; max-width: 60ch; }
+@media (max-width: 700px) { .c-tentang .fd { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .c-tentang .story,.c-tentang  .vals,.c-tentang  .hl { grid-template-columns: 1fr; } }

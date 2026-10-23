@@ -1,0 +1,20 @@
+/* plans: diawali .c-plans supaya gaya tidak bocor ke komponen lain */
+.c-plans .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.c-plans .plan { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); padding: 30px 28px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.c-plans .plan.hi { background: linear-gradient(180deg, rgba(138,43,255,.16), rgba(138,43,255,.04)); border-color: rgba(183,140,255,.45); }
+.c-plans .nm { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; }
+.c-plans .nm small { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.c-plans .pr { font-size: clamp(30px, 3.4vw, 38px); font-weight: 600; letter-spacing: -.03em; font-variant-numeric: tabular-nums; line-height: 1; }
+.c-plans .pr span { display: block; font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-top: 8px; }
+.c-plans .plan p { color: var(--muted); font-size: 15px; }
+.c-plans .plan ul { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); display: grid; gap: 10px; font-size: 14.5px; }
+.c-plans .plan li { display: flex; gap: 10px; }
+.c-plans .plan li::before { content: ""; flex: 0 0 auto; width: 14px; height: 8px; border-left: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg) translate(2px, 4px); }
+.c-plans .plan li.inc { color: var(--muted); }
+.c-plans .plan .btn { margin-top: auto; }
+.c-plans .custom { margin-top: 16px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px 40px; align-items: center; padding: 26px 28px; border: 1px dashed rgba(183,140,255,.35); border-radius: var(--radius); }
+.c-plans .custom b { font-size: 18px; font-weight: 600; }
+.c-plans .custom p { color: var(--muted); font-size: 15px; margin-top: 4px; }
+.c-plans .note { color: var(--dim); font-size: 14px; margin-top: 20px; text-align: center; }
+.c-plans .calc-link { text-align: center; margin-top: 18px; }
+@media (max-width: 900px) { .c-plans .plans { grid-template-columns: 1fr; } .c-plans .custom { grid-template-columns: 1fr; } }

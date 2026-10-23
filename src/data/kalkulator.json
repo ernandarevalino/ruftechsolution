@@ -1,0 +1,440 @@
+{
+  "judul": "Hitung estimasi biayamu",
+  "catatan": "Ini estimasi awal. Harga final disepakati setelah konsultasi, tergantung kerumitan alur usahamu.",
+  "dasar": {
+    "nama": "Fondasi aplikasi",
+    "harga": 350000,
+    "isi": "Login, database Google Sheets, pemasangan, dan pelatihan"
+  },
+  "grup": [
+    {
+      "nama": "Penjualan & kasir",
+      "item": [
+        {
+          "id": "kasir",
+          "nama": "Kasir & transaksi penjualan",
+          "ket": "Daftar produk, keranjang, metode bayar",
+          "harga": 250000
+        },
+        {
+          "id": "nota",
+          "nama": "Nota digital ke WhatsApp",
+          "ket": "Kirim nota ke pelanggan sekali klik",
+          "harga": 100000
+        },
+        {
+          "id": "barcode",
+          "nama": "Scan barcode",
+          "ket": "Lewat scanner atau kamera HP",
+          "harga": 200000
+        },
+        {
+          "id": "struk",
+          "nama": "Cetak struk thermal",
+          "ket": "Printer 58/80mm",
+          "harga": 150000
+        },
+        {
+          "id": "bayar",
+          "nama": "Multi metode bayar",
+          "ket": "Tunai, QRIS, transfer, dicatat terpisah",
+          "harga": 100000
+        },
+        {
+          "id": "diskon",
+          "nama": "Diskon & promo",
+          "ket": "Potongan per produk, per transaksi, atau jam tertentu",
+          "harga": 150000
+        },
+        {
+          "id": "hargapel",
+          "nama": "Harga grosir / per pelanggan",
+          "ket": "Harga berbeda untuk eceran, grosir, atau pelanggan tertentu",
+          "harga": 200000
+        },
+        {
+          "id": "meja",
+          "nama": "Pesanan per meja & take away",
+          "ket": "Untuk cafe dan rumah makan",
+          "harga": 200000
+        },
+        {
+          "id": "po",
+          "nama": "Pre-order & pesanan",
+          "ket": "Catat pesanan, DP, dan tanggal ambil",
+          "harga": 250000
+        },
+        {
+          "id": "katalog",
+          "nama": "Katalog / menu online",
+          "ket": "Halaman produk untuk pelanggan, pesan lewat WA",
+          "harga": 400000
+        }
+      ]
+    },
+    {
+      "nama": "Stok & gudang",
+      "item": [
+        {
+          "id": "stok",
+          "nama": "Stok masuk & keluar",
+          "ket": "Sisa stok terkini dan koreksi stok",
+          "harga": 200000
+        },
+        {
+          "id": "menipis",
+          "nama": "Peringatan stok menipis",
+          "ket": "Tanda otomatis saat stok di bawah batas",
+          "harga": 100000
+        },
+        {
+          "id": "opname",
+          "nama": "Stok opname",
+          "ket": "Hitung fisik dan selisih stok",
+          "harga": 150000
+        },
+        {
+          "id": "beli",
+          "nama": "Pembelian ke supplier",
+          "ket": "Catat pembelian dan harga modal",
+          "harga": 250000
+        },
+        {
+          "id": "resep",
+          "nama": "Resep / bahan baku",
+          "ket": "Stok bahan berkurang otomatis saat produk terjual",
+          "harga": 400000
+        },
+        {
+          "id": "produksi",
+          "nama": "Produksi",
+          "ket": "Bahan baku diolah menjadi produk jadi",
+          "harga": 450000
+        },
+        {
+          "id": "gudang",
+          "nama": "Gudang multi lokasi",
+          "ket": "Stok terpisah per gudang atau lokasi",
+          "harga": 300000
+        }
+      ]
+    },
+    {
+      "nama": "Keuangan & laporan",
+      "item": [
+        {
+          "id": "laporan",
+          "nama": "Laporan omzet harian & bulanan",
+          "ket": "Ringkasan penjualan otomatis",
+          "harga": 100000
+        },
+        {
+          "id": "laba",
+          "nama": "Pengeluaran, HPP & laba",
+          "ket": "Laba kotor dan bersih",
+          "harga": 250000
+        },
+        {
+          "id": "piutang",
+          "nama": "Penjualan tempo & piutang",
+          "ket": "Jatuh tempo dan pelunasan",
+          "harga": 200000
+        },
+        {
+          "id": "hutang",
+          "nama": "Hutang ke supplier",
+          "ket": "Tagihan pembelian dan jadwal bayar",
+          "harga": 200000
+        },
+        {
+          "id": "kas",
+          "nama": "Kas harian & tutup kasir",
+          "ket": "Uang awal, uang akhir, dan selisih",
+          "harga": 150000
+        },
+        {
+          "id": "pdf",
+          "nama": "Laporan ke PDF",
+          "ket": "Laporan stok & keuangan siap cetak",
+          "harga": 100000
+        },
+        {
+          "id": "excel",
+          "nama": "Ekspor laporan ke Excel",
+          "ket": "Unduh data untuk diolah sendiri",
+          "harga": 100000
+        },
+        {
+          "id": "grafik",
+          "nama": "Dashboard grafik owner",
+          "ket": "Grafik penjualan, produk terlaris, tren",
+          "harga": 200000
+        }
+      ]
+    },
+    {
+      "nama": "Karyawan",
+      "item": [
+        {
+          "id": "akses",
+          "nama": "Akun owner & kasir terpisah",
+          "ket": "Hak akses berbeda per peran",
+          "harga": 200000
+        },
+        {
+          "id": "absensi",
+          "nama": "Absensi selfie + GPS",
+          "ket": "Radius lokasi, foto, jam masuk dan pulang",
+          "harga": 500000
+        },
+        {
+          "id": "shift",
+          "nama": "Jadwal shift karyawan",
+          "ket": "Shift tetap dan jadwal mingguan",
+          "harga": 200000
+        },
+        {
+          "id": "gaji",
+          "nama": "Rekap gaji",
+          "ket": "Gaji harian atau bulanan dari data absensi",
+          "harga": 350000
+        },
+        {
+          "id": "komisi",
+          "nama": "Komisi sales / karyawan",
+          "ket": "Hitung komisi dari penjualan",
+          "harga": 250000
+        }
+      ]
+    },
+    {
+      "nama": "Pelanggan",
+      "item": [
+        {
+          "id": "pelanggan",
+          "nama": "Database pelanggan",
+          "ket": "Kontak dan riwayat belanja",
+          "harga": 150000
+        },
+        {
+          "id": "member",
+          "nama": "Member & poin loyalitas",
+          "ket": "Poin berbasis nomor HP",
+          "harga": 300000
+        },
+        {
+          "id": "booking",
+          "nama": "Booking online & DP QRIS",
+          "ket": "Halaman pemesanan untuk pelanggan",
+          "harga": 600000
+        },
+        {
+          "id": "reminder",
+          "nama": "Pengingat WhatsApp ke pelanggan",
+          "ket": "Jatuh tempo, barang siap diambil, dan lainnya",
+          "harga": 250000
+        },
+        {
+          "id": "statuslayanan",
+          "nama": "Status pesanan / layanan",
+          "ket": "Antre, diproses, selesai, diambil (laundry, servis)",
+          "harga": 250000
+        }
+      ]
+    },
+    {
+      "nama": "Operasional khusus",
+      "item": [
+        {
+          "id": "titip",
+          "nama": "Titip jual & setoran",
+          "ket": "Stok per warung, foto bukti, lokasi",
+          "harga": 400000
+        },
+        {
+          "id": "cabang",
+          "nama": "Multi cabang / outlet",
+          "ket": "Data dan laporan per cabang",
+          "harga": 400000
+        },
+        {
+          "id": "retur",
+          "nama": "Retur & persetujuan owner",
+          "ket": "Alur retur dengan approval",
+          "harga": 250000
+        },
+        {
+          "id": "kirim",
+          "nama": "Pengiriman & ongkir",
+          "ket": "Daftar kiriman, kurir, dan status antar",
+          "harga": 300000
+        },
+        {
+          "id": "sewa",
+          "nama": "Sewa / rental per jam",
+          "ket": "Timer pemakaian dan tagihan otomatis",
+          "harga": 400000
+        },
+        {
+          "id": "servis",
+          "nama": "Servis & garansi barang",
+          "ket": "Tiket servis, status, dan masa garansi",
+          "harga": 300000
+        }
+      ]
+    },
+    {
+      "nama": "Tambahan",
+      "item": [
+        {
+          "id": "brand",
+          "nama": "Tampilan sesuai brand",
+          "ket": "Logo, warna, dan nama usahamu di aplikasi",
+          "harga": 100000
+        },
+        {
+          "id": "foto",
+          "nama": "Upload foto",
+          "ket": "Foto produk, bukti transaksi, atau dokumentasi",
+          "harga": 150000
+        },
+        {
+          "id": "lokasi",
+          "nama": "Titik lokasi GPS",
+          "ket": "Simpan lokasi pelanggan, toko, atau kunjungan",
+          "harga": 150000
+        },
+        {
+          "id": "email",
+          "nama": "Notifikasi email ke owner",
+          "ket": "Ringkasan harian atau peringatan penting",
+          "harga": 100000
+        },
+        {
+          "id": "backup",
+          "nama": "Backup data otomatis",
+          "ket": "Salinan data berkala ke Google Drive",
+          "harga": 100000
+        }
+      ]
+    }
+  ],
+  "preset": [
+    {
+      "nama": "Basic",
+      "item": [
+        "kasir",
+        "nota",
+        "laporan"
+      ]
+    },
+    {
+      "nama": "Standard",
+      "item": [
+        "kasir",
+        "nota",
+        "laporan",
+        "stok",
+        "laba"
+      ]
+    },
+    {
+      "nama": "Pro",
+      "item": [
+        "kasir",
+        "nota",
+        "laporan",
+        "stok",
+        "laba",
+        "akses",
+        "piutang",
+        "pdf"
+      ]
+    }
+  ],
+  "contoh": [
+    {
+      "nama": "Toko ritel",
+      "item": [
+        "kasir",
+        "nota",
+        "barcode",
+        "struk",
+        "bayar",
+        "stok",
+        "menipis",
+        "laporan",
+        "laba",
+        "akses"
+      ]
+    },
+    {
+      "nama": "Cafe",
+      "item": [
+        "kasir",
+        "nota",
+        "meja",
+        "struk",
+        "bayar",
+        "diskon",
+        "resep",
+        "laporan",
+        "laba",
+        "akses"
+      ]
+    },
+    {
+      "nama": "Distributor",
+      "item": [
+        "kasir",
+        "nota",
+        "hargapel",
+        "stok",
+        "gudang",
+        "beli",
+        "piutang",
+        "hutang",
+        "laporan",
+        "laba",
+        "pdf",
+        "kirim"
+      ]
+    },
+    {
+      "nama": "Laundry",
+      "item": [
+        "kasir",
+        "nota",
+        "statuslayanan",
+        "reminder",
+        "pelanggan",
+        "laporan",
+        "laba",
+        "struk"
+      ]
+    },
+    {
+      "nama": "Titip jual",
+      "item": [
+        "titip",
+        "nota",
+        "foto",
+        "lokasi",
+        "stok",
+        "laporan"
+      ]
+    },
+    {
+      "nama": "Sewa / booking",
+      "item": [
+        "sewa",
+        "booking",
+        "kasir",
+        "member",
+        "laporan",
+        "laba",
+        "akses"
+      ]
+    }
+  ]
+}

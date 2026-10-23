@@ -1,0 +1,14 @@
+/* testimoni: diawali .c-testimoni supaya gaya tidak bocor ke komponen lain */
+.c-testimoni .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.c-testimoni .grid.one { grid-template-columns: minmax(0, 720px); justify-content: center; }
+.c-testimoni .q { margin: 0; padding: 28px; display: grid; gap: 16px; position: relative; }
+.c-testimoni .mark { position: absolute; top: 6px; right: 22px; font-size: 80px; line-height: 1; color: rgba(183,140,255,.25); font-family: Georgia, serif; }
+.c-testimoni blockquote { margin: 0; font-size: 17px; line-height: 1.6; color: var(--ink); }
+.c-testimoni .bukti { border-radius: 12px; border: 1px solid var(--line); max-height: 320px; width: 100%; object-fit: cover; object-position: top; }
+.c-testimoni figcaption { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.c-testimoni .av { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: 0 0 auto; }
+.c-testimoni .ini { display: grid; place-items: center; background: linear-gradient(135deg, #2350b0, #8A2BFF); font-weight: 700; font-size: 15px; }
+.c-testimoni figcaption b { display: block; font-size: 15px; }
+.c-testimoni figcaption small { color: var(--muted); font-size: 13.5px; }
+.c-testimoni .lnk { margin-left: auto; font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 600; }
+@media (max-width: 900px) { .c-testimoni .grid { grid-template-columns: 1fr; } }

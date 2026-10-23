@@ -1,0 +1,89 @@
+{
+  "judul": "Dipercaya oleh usaha-usaha ini",
+  "daftar": [
+    {
+      "nama": "Fa!House Mahjong",
+      "logo": "/img/mitra/fahouse-mahjong.webp",
+      "latar": "#fbf5e5",
+      "karya": "fahouse-mahjong"
+    },
+    {
+      "nama": "UDrinks",
+      "logo": "/img/mitra/udrinks.webp",
+      "latar": "#fdfefe",
+      "karya": "udrinks"
+    },
+    {
+      "nama": "Alesha Store",
+      "logo": "/img/mitra/alesha-store.webp",
+      "latar": "#fdfdfd",
+      "karya": "alesha-store"
+    },
+    {
+      "nama": "UD. Rezeki Bersama",
+      "logo": "/img/mitra/ud-rezeki-bersama.webp",
+      "latar": "#ffffff",
+      "karya": "ud-rezeki-bersama"
+    },
+    {
+      "nama": "Katabond",
+      "logo": "/img/mitra/katabond.webp",
+      "latar": "#ffffff",
+      "karya": "katabond"
+    },
+    {
+      "nama": "HS Durian",
+      "logo": "/img/mitra/hs-durian.webp",
+      "latar": "#ffffff",
+      "karya": "hs-durian"
+    },
+    {
+      "nama": "Ubi Cilembu 79",
+      "logo": "/img/mitra/ubi-cilembu-79.webp",
+      "latar": "#fbbc00",
+      "karya": ""
+    },
+    {
+      "nama": "Amara Gitar",
+      "logo": "/img/mitra/amara-gitar.webp",
+      "latar": "#ffffff",
+      "karya": ""
+    },
+    {
+      "nama": "Bandar Teh",
+      "logo": "/img/mitra/bandar-teh.webp",
+      "latar": "#ffffff",
+      "karya": ""
+    },
+    {
+      "nama": "Smart BSK",
+      "logo": "/img/mitra/smart-bsk.webp",
+      "latar": "#ffffff",
+      "karya": ""
+    },
+    {
+      "nama": "Cleo Clean Laundry Express",
+      "logo": "/img/mitra/cleo-clean.webp",
+      "latar": "#ffffff",
+      "karya": ""
+    },
+    {
+      "nama": "Artama Laundry",
+      "logo": "/img/mitra/artama-laundry.webp",
+      "latar": "#fefefe",
+      "karya": ""
+    },
+    {
+      "nama": "Mala Meals",
+      "logo": "/img/mitra/mala-meals.webp",
+      "latar": "#ffffff",
+      "karya": ""
+    },
+    {
+      "nama": "Yeppeun Cookies",
+      "logo": "/img/mitra/yeppeun-cookies.webp",
+      "latar": "#ffffff",
+      "karya": ""
+    }
+  ]
+}

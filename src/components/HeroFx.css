@@ -1,0 +1,12 @@
+/* herofx: diawali .c-herofx supaya gaya tidak bocor ke komponen lain */
+.c-herofx.fx { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.c-herofx .net { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55; }
+.c-herofx .aurora { position: absolute; inset: 0; filter: blur(60px); opacity: .75; }
+.c-herofx .aurora i { position: absolute; border-radius: 50%; mix-blend-mode: screen; }
+.c-herofx .aurora i:nth-child(1) { width: 46vmax; height: 46vmax; left: -12vmax; top: -18vmax; background: radial-gradient(circle, #2350b0 0%, transparent 65%); animation: herofx-orb1 18s ease-in-out infinite alternate; }
+.c-herofx .aurora i:nth-child(2) { width: 40vmax; height: 40vmax; right: -14vmax; top: 4vmax; background: radial-gradient(circle, #6a24d8 0%, transparent 65%); animation: herofx-orb2 22s ease-in-out infinite alternate; }
+.c-herofx .aurora i:nth-child(3) { width: 30vmax; height: 30vmax; left: 30%; bottom: -18vmax; background: radial-gradient(circle, #1b6ea8 0%, transparent 65%); animation: herofx-orb3 26s ease-in-out infinite alternate; }
+@keyframes herofx-orb1 { to { transform: translate(12vmax, 8vmax) scale(1.15); } }
+@keyframes herofx-orb2 { to { transform: translate(-10vmax, 10vmax) scale(.9); } }
+@keyframes herofx-orb3 { to { transform: translate(-8vmax, -6vmax) scale(1.2); } }
+.c-herofx .spot { position: absolute; inset: 0; background: radial-gradient(500px circle at var(--hx, 50%) var(--hy, 40%), rgba(183,140,255,.12), transparent 60%); }

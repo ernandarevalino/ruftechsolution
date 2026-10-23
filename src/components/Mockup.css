@@ -1,0 +1,47 @@
+/* mockup: diawali .c-mockup supaya gaya tidak bocor ke komponen lain */
+.c-mockup.scr { background: var(--scr); color: var(--scr-ink); border-radius: 6px; overflow: hidden; font-size: 12px; line-height: 1.4; text-align: left; }
+.c-mockup .bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--scr-line); font-weight: 700; font-size: 12.5px; }
+.c-mockup .bar span { font-weight: 500; color: var(--scr-muted); font-size: 11px; }
+.c-mockup .tables { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 12px; background: var(--scr-2); }
+.c-mockup .tb { background: var(--scr); border: 1px solid var(--scr-line); border-radius: 8px; padding: 10px; display: grid; gap: 4px; }
+.c-mockup .tb b { font-size: 12px; }
+.c-mockup .tb .mono { font-size: 11px; color: var(--scr-muted); }
+.c-mockup .st { justify-self: start; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 999px; }
+.c-mockup .st.play,.c-mockup  .pill.busy { background: var(--busy-bg); color: var(--busy); }
+.c-mockup .st.free,.c-mockup  .pill.ok { background: var(--ok-bg); color: var(--ok); }
+.c-mockup .st.book,.c-mockup  .pill.warn { background: var(--warn-bg); color: var(--warn); }
+.c-mockup .st.play { position: relative; padding-left: 16px; }
+.c-mockup .st.play::before { content: ""; position: absolute; left: 6px; top: 50%; width: 5px; height: 5px; margin-top: -2.5px; border-radius: 50%; background: currentColor; animation: mockup-blink 1.4s ease-in-out infinite; }
+@keyframes mockup-blink { 50% { opacity: .25; } }
+.c-mockup .rows .rw { display: grid; grid-template-columns: 1fr auto auto; gap: 12px; align-items: center; padding: 10px 14px; border-top: 1px solid var(--scr-line); font-size: 12px; }
+.c-mockup .rows .rw:first-child { border-top: 0; }
+.c-mockup .rows .rw small { display: block; color: var(--scr-muted); font-size: 10.5px; }
+.c-mockup .rows .hdr { font-size: 10.5px; color: var(--scr-muted); font-weight: 600; background: var(--scr-2); text-transform: uppercase; letter-spacing: .05em; }
+.c-mockup .pill { font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+.c-mockup .pill.warn { animation: mockup-nudge 2.6s ease-in-out infinite; }
+@keyframes mockup-nudge { 0%, 80%, 100% { box-shadow: 0 0 0 0 rgba(183,121,31,0); } 90% { box-shadow: 0 0 0 4px rgba(183,121,31,.18); } }
+.c-mockup .sum { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--scr-line); border-bottom: 1px solid var(--scr-line); }
+.c-mockup .sum div { background: var(--scr); padding: 10px 14px; }
+.c-mockup .sum small { display: block; font-size: 10.5px; color: var(--scr-muted); }
+.c-mockup .sum b { font-size: 14px; }
+.c-mockup .pos { display: grid; grid-template-columns: 1.3fr 1fr; }
+.c-mockup .prods { padding: 12px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; background: var(--scr-2); align-content: start; }
+.c-mockup .scan { grid-column: 1 / -1; display: flex; align-items: center; gap: 8px; background: var(--scr); border: 1px solid var(--scr-line); border-radius: 8px; padding: 8px 10px; color: var(--scr-muted); font-size: 11px; }
+.c-mockup .scan i { display: block; width: 16px; height: 12px; background: repeating-linear-gradient(90deg, var(--scr-ink) 0 1px, transparent 1px 3px); }
+.c-mockup .p { background: var(--scr); border: 1px solid var(--scr-line); border-radius: 8px; padding: 9px; }
+.c-mockup .p b { display: block; font-size: 11px; font-weight: 600; }
+.c-mockup .p span { font-size: 10.5px; color: var(--scr-muted); }
+.c-mockup .cart { padding: 12px 14px; display: flex; flex-direction: column; gap: 7px; border-left: 1px solid var(--scr-line); }
+.c-mockup .ln { display: flex; justify-content: space-between; gap: 8px; font-size: 11.5px; }
+.c-mockup .tot { margin-top: auto; padding-top: 10px; border-top: 1px dashed var(--scr-line); display: flex; justify-content: space-between; font-weight: 700; font-size: 14px; }
+.c-mockup .pay { background: var(--busy); color: #fff; text-align: center; border-radius: 8px; padding: 9px; font-weight: 600; font-size: 12px; }
+.c-mockup .chartbox { padding: 16px 14px 14px; }
+.c-mockup .bars { display: flex; align-items: flex-end; gap: 8px; height: 110px; }
+.c-mockup .bars i { flex: 1; background: #C9D6F2; border-radius: 4px 4px 0 0; }
+.c-mockup .bars i:last-child { background: var(--busy); }
+@media (max-width: 560px) {
+  .c-mockup .tables { grid-template-columns: repeat(2, 1fr); }
+  .c-mockup .pos { grid-template-columns: 1fr; }
+  .c-mockup .prods { grid-template-columns: 1fr 1fr; }
+  .c-mockup .cart { border-left: 0; border-top: 1px solid var(--scr-line); }
+}

@@ -1,0 +1,4 @@
+/* artikelindex: diawali .c-artikelindex supaya gaya tidak bocor ke komponen lain */
+.c-artikelindex .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 900px) { .c-artikelindex .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .c-artikelindex .grid { grid-template-columns: 1fr; } }

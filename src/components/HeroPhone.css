@@ -1,0 +1,59 @@
+/* herophone: diawali .c-herophone supaya gaya tidak bocor ke komponen lain */
+.c-herophone.hp { position: relative; width: min(100%, 420px); margin-inline: auto; padding: 30px 0; }
+.c-herophone .glowring { position: absolute; inset: 8% 10%; border-radius: 50%; background: radial-gradient(circle, rgba(138,43,255,.45), rgba(35,80,176,.2) 50%, transparent 70%); filter: blur(30px); animation: herophone-br 6s ease-in-out infinite; }
+@keyframes herophone-br { 50% { transform: scale(1.08); opacity: .8; } }
+.c-herophone .phone { position: relative; width: 270px; max-width: 74%; margin-inline: auto; aspect-ratio: 9 / 18.5; background: #0b0f1c; border-radius: 42px; padding: 11px; box-shadow: 0 0 0 1px rgba(255,255,255,.1), 0 40px 80px -30px #000c, 0 0 60px -20px rgba(138,43,255,.5); animation: herophone-floaty 7s ease-in-out infinite; container-type: inline-size; }
+@keyframes herophone-floaty { 50% { transform: translateY(-10px) rotate(-.6deg); } }
+.c-herophone .island { position: absolute; top: 18px; left: 50%; width: 30%; height: 22px; margin-left: -15%; background: #0b0f1c; border-radius: 20px; z-index: 2; }
+.c-herophone .scr { height: 100%; border-radius: 32px; overflow: hidden; background: #F3F5FA; color: #16203A; padding: 44px 12px 10px; display: flex; flex-direction: column; gap: 8px; font-size: clamp(9px, 4.4cqi, 12px); }
+.c-herophone .top { display: flex; justify-content: space-between; align-items: center; }
+.c-herophone .top small,.c-herophone  .omz small,.c-herophone  .two small { display: block; color: #6B7488; font-size: .82em; }
+.c-herophone .top b { font-size: 1.05em; }
+.c-herophone .live { font-size: .78em; font-weight: 700; color: #1E9E5A; background: #E3F6EC; padding: .2em .7em; border-radius: 2em; display: inline-flex; align-items: center; gap: .35em; }
+.c-herophone .live::before { content: ""; width: .45em; height: .45em; border-radius: 50%; background: #1E9E5A; animation: herophone-bl 1.2s infinite; }
+@keyframes herophone-bl { 50% { opacity: .3; } }
+.c-herophone .omz { background: linear-gradient(135deg, #1B4282, #3B1F8C); color: #fff; border-radius: 14px; padding: 12px 14px; }
+.c-herophone .omz small { color: rgba(255,255,255,.7); }
+.c-herophone .omz b { display: block; font-size: 1.75em; letter-spacing: -.02em; margin-top: 2px; transition: color .3s; }
+.c-herophone .omz b.bump { animation: herophone-bump .6s ease; }
+@keyframes herophone-bump { 40% { transform: scale(1.06); color: #C8F7DA; } }
+.c-herophone .up { font-size: .8em; color: #9EF0BF; }
+.c-herophone .two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.c-herophone .two div { background: #fff; border-radius: 12px; padding: 8px 10px; border: 1px solid #E6E9F0; }
+.c-herophone .two b { font-size: 1.15em; }
+.c-herophone .spark { background: #fff; border-radius: 12px; border: 1px solid #E6E9F0; padding: 8px 6px 4px; height: 58px; }
+.c-herophone .spark svg { width: 100%; height: 100%; display: block; }
+.c-herophone .spark .ln { stroke-dasharray: 1; stroke-dashoffset: 1; animation: herophone-draw 2.2s .6s cubic-bezier(.4,0,.2,1) forwards; }
+@keyframes herophone-draw { to { stroke-dashoffset: 0; } }
+.c-herophone .list { background: #fff; border-radius: 12px; border: 1px solid #E6E9F0; padding: 2px 10px; flex: 1; overflow: hidden; display: flex; flex-direction: column; }
+.c-herophone .list .tx { display: grid; grid-template-columns: auto 1fr auto; gap: 8px; align-items: center; padding: 7px 0; border-bottom: 1px solid #EEF1F6; }
+.c-herophone .list .tx:last-child { border-bottom: 0; }
+.c-herophone .list .tx b { display: block; font-size: .95em; }
+.c-herophone .list .tx small { color: #6B7488; font-size: .8em; }
+.c-herophone .list .tx em { font-style: normal; font-weight: 700; color: #1E9E5A; font-size: .9em; }
+.c-herophone .list .ic { width: 1.9em; height: 1.9em; border-radius: 8px; }
+.c-herophone .list .ic.k { background: #E3F6EC; } .c-herophone .list .ic.q { background: #E5ECF9; }
+.c-herophone .list .tx.new { animation: herophone-txin .6s cubic-bezier(.2,.8,.2,1); background: linear-gradient(90deg, #E3F6EC, transparent); }
+@keyframes herophone-txin { from { opacity: 0; transform: translateY(-100%); } }
+.c-herophone .tabbar { display: flex; justify-content: space-around; padding: 6px 0 2px; }
+.c-herophone .tabbar i { width: 1.6em; height: .35em; border-radius: 1em; background: #D6DCEA; }
+.c-herophone .tabbar i.on { background: #1B4282; }
+.c-herophone .chip { position: absolute; display: flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 14px; background: rgba(255,255,255,.96); color: #16203A; font-size: 13px; font-weight: 600; box-shadow: 0 18px 40px -16px rgba(0,0,0,.7); white-space: nowrap; animation: herophone-chipf 6s ease-in-out infinite; }
+.c-herophone .d { width: 9px; height: 9px; border-radius: 50%; flex: 0 0 auto; }
+.c-herophone .d.g { background: #1E9E5A; box-shadow: 0 0 0 4px rgba(30,158,90,.18); }
+.c-herophone .d.y { background: #E2A93B; box-shadow: 0 0 0 4px rgba(226,169,59,.2); }
+.c-herophone .d.p { background: #8A2BFF; box-shadow: 0 0 0 4px rgba(138,43,255,.18); }
+.c-herophone .c1 { left: -8%; top: 6%; animation-delay: 0s; }
+.c-herophone .c2 { right: -8%; top: 46%; animation-delay: -2s; }
+.c-herophone .c3 { left: -6%; bottom: 12%; animation-delay: -4s; }
+@keyframes herophone-chipf { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.c-herophone .ticks { width: 16px; height: 9px; position: relative; }
+.c-herophone .ticks::before,.c-herophone  .ticks::after { content: ""; position: absolute; top: 0; width: 4px; height: 8px; border: solid #53BDEB; border-width: 0 1.6px 1.6px 0; rotate: 45deg; }
+.c-herophone .ticks::before { left: 1px; } .c-herophone .ticks::after { left: 6px; }
+@media (max-width: 900px) {
+  .c-herophone.hp { width: min(100%, 360px); padding: 10px 0 20px; }
+  .c-herophone .phone { width: 200px; }
+  .c-herophone.hp { padding: 22px 0 6px; }
+  .c-herophone .chip { font-size: 11.5px; padding: 7px 11px; }
+  .c-herophone .c1 { left: 0; top: 2%; } .c-herophone .c2 { right: 0; } .c-herophone .c3 { left: 0; bottom: 8%; }
+}

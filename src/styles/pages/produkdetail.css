@@ -1,0 +1,13 @@
+/* produkdetail: diawali .c-produkdetail supaya gaya tidak bocor ke komponen lain */
+.c-produkdetail .pshot { max-width: 980px; }
+.c-produkdetail .cols { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: start; }
+.c-produkdetail .buy { position: sticky; top: 100px; padding: 28px; display: grid; gap: 12px; }
+.c-produkdetail .pr { font-size: 32px; font-weight: 600; letter-spacing: -.03em; }
+.c-produkdetail .note,.c-produkdetail  .for { color: var(--muted); font-size: 15px; }
+.c-produkdetail .for b { color: var(--ink); font-weight: 600; }
+.c-produkdetail .buy .btn { margin-top: 8px; }
+.c-produkdetail .fh { font-size: 26px; }
+.c-produkdetail .feat { list-style: none; margin: 18px 0 48px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.c-produkdetail .feat li { padding: 16px 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--card); font-size: 15px; }
+.c-produkdetail .prose { max-width: 66ch; }
+@media (max-width: 860px) { .c-produkdetail .cols { grid-template-columns: 1fr; } .c-produkdetail .buy { position: static; } .c-produkdetail .feat { grid-template-columns: 1fr; } }

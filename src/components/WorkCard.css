@@ -1,0 +1,10 @@
+/* workcard: diawali .c-workcard supaya gaya tidak bocor ke komponen lain */
+.c-workcard.wc { display: grid; gap: 16px; text-decoration: none; align-content: start; }
+.c-workcard .meta { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.c-workcard .ind { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--dim); font-weight: 600; }
+.c-workcard h3 { font-size: 22px; margin-top: 6px; transition: color .2s; }
+.c-workcard.wc:hover h3 { color: var(--accent); }
+.c-workcard p { color: var(--muted); font-size: 15.5px; max-width: 60ch; }
+.c-workcard .go { width: 40px; height: 40px; border-radius: 50%; border: 1px dashed rgba(183,140,255,.5); display: grid; place-items: center; color: var(--accent); flex: 0 0 auto; transition: transform .25s; }
+.c-workcard .go svg { width: 16px; height: 16px; }
+.c-workcard.wc:hover .go { transform: rotate(45deg); }

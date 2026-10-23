@@ -1,0 +1,16 @@
+/* mitra: diawali .c-mitra supaya gaya tidak bocor ke komponen lain */
+.c-mitra.mitra { padding-block: 34px 30px; border-block: 1px solid var(--line); background: rgba(255,255,255,.015); }
+.c-mitra .lbl { text-align: center; font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--dim); margin-bottom: 22px; }
+.c-mitra .belt { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.c-mitra .row { display: flex; align-items: center; width: max-content; padding-block: 8px; animation: mitra-belt 75s linear infinite; }
+.c-mitra .belt:hover .row { animation-play-state: paused; }
+@keyframes mitra-belt { to { transform: translateX(-33.333%); } }
+.c-mitra .it { display: grid; place-items: center; padding-inline: clamp(8px, 1.2vw, 14px); text-decoration: none; }
+.c-mitra .tile { display: grid; place-items: center; height: 100px; padding: 8px 14px; border-radius: 16px; background: var(--bg); box-shadow: 0 10px 30px -14px rgba(0,0,0,.7), inset 0 0 0 1px rgba(0,0,0,.04); transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s; overflow: hidden; }
+.c-mitra .tile img { height: 84px; width: auto; max-width: 230px; object-fit: contain; }
+.c-mitra .it:hover .tile { transform: translateY(-4px) scale(1.04); box-shadow: 0 18px 40px -14px rgba(138,43,255,.55); }
+@media (max-width: 560px) { .c-mitra .tile { height: 68px; padding: 6px 10px; border-radius: 12px; } .c-mitra .tile img { height: 54px; max-width: 120px; } }
+.c-mitra .wm { display: inline-flex; align-items: center; gap: 10px; font-size: clamp(17px, 1.9vw, 22px); font-weight: 600; letter-spacing: -.01em; color: var(--muted); white-space: nowrap; transition: color .3s; }
+.c-mitra .wm i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-deep); }
+.c-mitra .it:hover .wm { color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .c-mitra .belt { overflow-x: auto; } }

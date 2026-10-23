@@ -1,0 +1,18 @@
+/* carakerja: diawali .c-carakerja supaya gaya tidak bocor ke komponen lain */
+.c-carakerja .ck-hero { position: relative; overflow: hidden; isolation: isolate; min-height: min(760px, 92svh); display: grid; place-items: center; text-align: center; padding-block: 150px 60px; }
+.c-carakerja .ck-hero .wrap { position: relative; z-index: 2; }
+.c-carakerja .ck-hero h1 { font-size: clamp(38px, 6.2vw, 76px); letter-spacing: -.035em; line-height: 1.06; max-width: 15ch; margin: 18px auto 0; }
+.c-carakerja .ck-hero h1 em { font-style: italic; background: linear-gradient(100deg, #B78CFF 0%, #E3D2FF 40%, #8A2BFF 60%, #B78CFF 100%); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .08em; animation: carakerja-sheen 6s linear infinite; }
+@keyframes carakerja-sheen { to { background-position: -250% 0; } }
+.c-carakerja .ck-hero p { color: var(--muted); font-size: clamp(16px, 1.7vw, 19px); max-width: 52ch; margin: 26px auto 0; }
+.c-carakerja .scroll { display: grid; justify-items: center; gap: 14px; margin-top: 56px; font-size: 11px; letter-spacing: .3em; color: var(--dim); font-weight: 600; text-decoration: none; }
+.c-carakerja .scroll i { display: block; width: 1px; height: 56px; background: linear-gradient(var(--dim), transparent); position: relative; overflow: hidden; }
+.c-carakerja .scroll i::after { content: ""; position: absolute; left: 0; top: -20px; width: 1px; height: 20px; background: var(--accent); animation: carakerja-drip 2.2s ease-in-out infinite; }
+@keyframes carakerja-drip { to { top: 56px; } }
+.c-carakerja .ck-hero.go h1 .w { display: inline-block; animation: carakerja-wordIn .9s cubic-bezier(.2,.75,.2,1) both; animation-delay: calc(var(--i) * 70ms + 100ms); }
+.c-carakerja .ck-hero.go h1 em.w { display: inline; animation: carakerja-wordIn .9s cubic-bezier(.2,.75,.2,1) both, carakerja-sheen 6s linear 1.4s infinite; animation-delay: calc(var(--i) * 70ms + 100ms), 1.4s; }
+.c-carakerja .ck-hero.go p,.c-carakerja .ck-hero.go .scroll { animation: carakerja-fadeUp .9s cubic-bezier(.2,.75,.2,1) both; }
+.c-carakerja .ck-hero.go p { animation-delay: .5s; } .c-carakerja .ck-hero.go .scroll { animation-delay: .75s; }
+@keyframes carakerja-wordIn { from { opacity: 0; transform: translateY(.55em) rotate(2deg); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes carakerja-fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.c-carakerja .ck-cta { text-align: center; margin-top: 48px; }

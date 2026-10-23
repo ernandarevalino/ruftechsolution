@@ -1,0 +1,17 @@
+/* layanan: diawali .c-layanan supaya gaya tidak bocor ke komponen lain */
+.c-layanan .groups { display: grid; gap: clamp(56px, 8vw, 96px); }
+.c-layanan .group { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 64px); align-items: start; scroll-margin-top: 110px; }
+.c-layanan .gh { position: sticky; top: 110px; display: grid; gap: 12px; }
+.c-layanan .num { font-family: var(--mono); color: var(--accent); font-size: 14px; }
+.c-layanan .gh h2 { font-size: clamp(28px, 3.6vw, 40px); }
+.c-layanan .gh p { color: var(--muted); }
+.c-layanan .items { display: grid; gap: 14px; }
+.c-layanan .item { padding: 26px 28px; }
+.c-layanan .item h3 { font-size: 19px; }
+.c-layanan .item p { color: var(--muted); margin-top: 8px; font-size: 15.5px; }
+.c-layanan .base { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 56px; padding: clamp(28px, 4vw, 48px); background: linear-gradient(140deg, rgba(35,80,176,.18), rgba(138,43,255,.08)); }
+.c-layanan .base h2 { font-size: clamp(24px, 3vw, 32px); margin-top: 12px; }
+.c-layanan .base ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; color: var(--muted); }
+.c-layanan .base b { color: var(--ink); font-weight: 600; }
+.c-layanan .cta { text-align: center; margin-top: 40px; }
+@media (max-width: 860px) { .c-layanan .group,.c-layanan  .base { grid-template-columns: 1fr; } .c-layanan .gh { position: static; } }

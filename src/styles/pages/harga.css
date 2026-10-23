@@ -1,0 +1,18 @@
+/* harga: diawali .c-harga supaya gaya tidak bocor ke komponen lain */
+.c-harga .incl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.c-harga .incl .card { padding: 28px; }
+.c-harga .incl h3 { font-size: 19px; }
+.c-harga .incl p { color: var(--muted); margin-top: 8px; font-size: 15.5px; }
+.c-harga .pay { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 16px; align-items: center; }
+.c-harga .pc { padding: 28px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: start; }
+.c-harga .pct { font-size: clamp(40px, 5vw, 56px); font-weight: 600; letter-spacing: -.04em; line-height: 1; background: linear-gradient(180deg, #E3D2FF, var(--accent-deep)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.c-harga .pc h3 { font-size: 19px; }
+.c-harga .pc p { color: var(--muted); margin-top: 8px; font-size: 15.5px; }
+.c-harga .arrow { color: var(--accent); width: 32px; }
+.c-harga .gr { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 24px 48px; padding: clamp(24px, 4vw, 40px); border-color: rgba(61,220,132,.35); background: linear-gradient(140deg, rgba(30,158,90,.14), rgba(30,158,90,.03)); }
+.c-harga .gr h2 { font-size: clamp(24px, 3vw, 32px); margin-top: 10px; }
+.c-harga .gr ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.c-harga .gr li { display: flex; gap: 12px; }
+.c-harga .gr li::before { content: ""; flex: 0 0 auto; width: 14px; height: 8px; border-left: 2px solid #3ddc84; border-bottom: 2px solid #3ddc84; transform: rotate(-45deg) translate(2px, 5px); }
+@media (max-width: 760px) { .c-harga .gr { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .c-harga .incl { grid-template-columns: 1fr; } .c-harga .pay { grid-template-columns: 1fr; } .c-harga .arrow { justify-self: center; rotate: 90deg; } }

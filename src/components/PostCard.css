@@ -1,0 +1,10 @@
+/* postcard: diawali .c-postcard supaya gaya tidak bocor ke komponen lain */
+.c-postcard.pc { display: grid; grid-template-rows: auto 1fr; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); text-decoration: none; overflow: hidden; }
+.c-postcard img,.c-postcard  .ph { aspect-ratio: 16 / 9; width: 100%; object-fit: cover; }
+.c-postcard .ph { display: grid; place-items: end start; padding: 20px; background: radial-gradient(circle at 80% 10%, #4a2a8c, transparent 60%), linear-gradient(140deg, #1c3a7d, #0c1736); }
+.c-postcard .ph span { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: rgba(255,255,255,.75); }
+.c-postcard .body { padding: 22px 24px 26px; display: grid; gap: 10px; align-content: start; }
+.c-postcard .m { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--dim); }
+.c-postcard .m span { color: var(--accent); font-weight: 600; }
+.c-postcard h3 { font-size: 20px; line-height: 1.25; }
+.c-postcard p { color: var(--muted); font-size: 15px; }

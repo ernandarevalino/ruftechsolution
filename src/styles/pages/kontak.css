@@ -1,0 +1,28 @@
+/* kontak: diawali .c-kontak supaya gaya tidak bocor ke komponen lain */
+.c-kontak .cols { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: 20px; align-items: start; }
+.c-kontak .form { padding: clamp(24px, 4vw, 40px); display: grid; gap: 20px; }
+.c-kontak .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.c-kontak label { display: grid; gap: 8px; font-size: 14px; font-weight: 500; color: var(--muted); }
+.c-kontak input:not([type=checkbox]),.c-kontak  select,.c-kontak  textarea { font: 16px var(--f); color: var(--ink); background: rgba(255,255,255,.04); border: 1px solid var(--line); border-radius: 12px; padding: 13px 14px; width: 100%; transition: border-color .2s; }
+.c-kontak input:focus,.c-kontak  select:focus,.c-kontak  textarea:focus { outline: none; border-color: var(--accent); }
+.c-kontak select option { background: var(--bg-2); }
+.c-kontak fieldset { border: 0; margin: 0; padding: 0; }
+.c-kontak legend { font-size: 14px; font-weight: 500; color: var(--muted); margin-bottom: 10px; }
+.c-kontak .checks { display: flex; flex-wrap: wrap; gap: 8px; }
+.c-kontak .ck { display: block; }
+.c-kontak .ck input { position: absolute; opacity: 0; pointer-events: none; }
+.c-kontak .ck span { display: inline-block; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); font-size: 14px; cursor: pointer; transition: all .2s; }
+.c-kontak .ck input:checked + span { background: var(--accent-deep); border-color: var(--accent-deep); color: #fff; }
+.c-kontak .ck input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.c-kontak .form .btn { justify-self: start; }
+.c-kontak .hint { font-size: 13.5px; color: var(--dim); }
+.c-kontak .side { display: grid; gap: 16px; }
+.c-kontak .info { padding: 24px; display: grid; gap: 10px; }
+.c-kontak .big { font-size: 22px; font-weight: 600; letter-spacing: -.02em; text-decoration: none; overflow-wrap: anywhere; }
+.c-kontak a.big:hover { color: var(--accent); }
+.c-kontak .acts { display: flex; flex-wrap: wrap; gap: 10px; }
+.c-kontak .acts .btn { padding: 12px 18px; font-size: 14px; }
+.c-kontak .info p { color: var(--ink); }
+.c-kontak .info .dim { color: var(--muted); font-size: 14px; }
+@media (max-width: 860px) { .c-kontak .cols { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .c-kontak .row2 { grid-template-columns: 1fr; } }

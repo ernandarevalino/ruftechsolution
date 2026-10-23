@@ -1,0 +1,13 @@
+/* steps: diawali .c-steps supaya gaya tidak bocor ke komponen lain */
+.c-steps.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: s; }
+.c-steps.steps li { counter-increment: s; display: grid; grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1.3fr); gap: 24px; align-items: baseline; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+.c-steps.steps li::before { content: "0" counter(s); font-size: 22px; color: var(--dim); font-weight: 500; }
+.c-steps.steps h3 { font-size: 21px; }
+.c-steps.steps p { color: var(--muted); }
+@media (max-width: 760px) { .c-steps.steps li { grid-template-columns: 44px minmax(0, 1fr); padding: 24px 22px; } .c-steps.steps p { grid-column: 2; } }
+@supports (animation-timeline: view()) {
+  .c-steps.steps li { animation: steps-stepIn linear both; animation-timeline: view(); animation-range: entry 10% cover 35%; }
+  @keyframes steps-stepIn { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: none; } }
+  .c-steps.steps li::before { animation: steps-numOn linear both; animation-timeline: view(); animation-range: cover 30% cover 50%; }
+  @keyframes steps-numOn { to { color: var(--accent); } }
+}

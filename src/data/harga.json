@@ -1,0 +1,47 @@
+{
+  "catatan": "Harga akhir disesuaikan setelah konsultasi, tergantung jumlah fitur dan kerumitan alur usaha. Pembayaran: DP 30% setelah rancangan disetujui, pelunasan 70% saat serah terima. Tanpa biaya bulanan.",
+  "paket": [
+    {
+      "nama": "Basic",
+      "harga": "Rp800rb",
+      "keterangan": "sekali bayar",
+      "untuk": "Untuk usaha yang baru mau pindah dari buku tulis.",
+      "fitur": [
+        "Transaksi penjualan & daftar produk",
+        "Nota digital ke WhatsApp",
+        "Laporan omzet harian & bulanan"
+      ],
+      "unggulan": false
+    },
+    {
+      "nama": "Standard",
+      "harga": "Rp1,25jt",
+      "keterangan": "sekali bayar",
+      "untuk": "Untuk toko yang perlu mengontrol stok dan laba.",
+      "fitur": [
+        "Semua fitur Basic",
+        "Stok masuk & keluar",
+        "Pengeluaran, HPP & laba"
+      ],
+      "unggulan": false
+    },
+    {
+      "nama": "Pro",
+      "harga": "Rp1,75jt",
+      "keterangan": "sekali bayar",
+      "untuk": "Untuk usaha dengan admin, tempo, dan laporan lengkap.",
+      "fitur": [
+        "Semua fitur Standard",
+        "Akun owner & kasir dengan akses berbeda",
+        "Penjualan tempo & piutang",
+        "Laporan stok & keuangan ke PDF"
+      ],
+      "unggulan": true
+    }
+  ],
+  "custom": {
+    "judul": "Custom, mulai Rp2,5jt",
+    "isi": "Booking online, absensi selfie dan GPS, titip jual, distribusi, atau beberapa modul sekaligus."
+  },
+  "garansi": []
+}

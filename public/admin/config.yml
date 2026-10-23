@@ -1,0 +1,252 @@
+# =========================================================
+# Panel admin Ruftech Solutions (Sveltia CMS)
+# Buka di: https://ALAMAT-WEB-KAMU/admin
+# =========================================================
+
+backend:
+  name: github
+  # GANTI dengan nama akun GitHub dan nama repository kamu, mis. ubaidillah/ruftech-web
+  repo: USERNAME-GITHUB/ruftech-web
+  branch: main
+  commit_messages:
+    create: "Tambah {{collection}} “{{slug}}”"
+    update: "Ubah {{collection}} “{{slug}}”"
+    delete: "Hapus {{collection}} “{{slug}}”"
+    uploadMedia: "Unggah “{{path}}”"
+    deleteMedia: "Hapus “{{path}}”"
+
+site_url: https://ruftechsolutions.netlify.app
+display_url: https://ruftechsolutions.netlify.app
+logo_url: /img/logo-mark.png
+
+# Semua gambar yang diunggah lewat admin disimpan di sini
+media_folder: public/media
+public_folder: /media
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  # ---------------- KARYA ----------------
+  - name: karya
+    label: Karya (Studi Kasus)
+    label_singular: Karya
+    description: Studi kasus aplikasi untuk klien. Tampil di halaman Karya dan slider beranda.
+    folder: src/content/karya
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{industri}}"
+    sortable_fields: [urutan, title]
+    fields:
+      - { name: title, label: Nama klien / usaha, widget: string }
+      - { name: industri, label: Bidang usaha, widget: string, hint: "Mis. Toko kosmetik, Distributor" }
+      - { name: ringkasan, label: Ringkasan singkat, widget: text, hint: "1–2 kalimat. Tampil di kartu dan hasil Google." }
+      - { name: modul, label: Modul yang dipakai, widget: list, required: false }
+      - { name: platform, label: Platform, widget: string, required: false, default: "Google Apps Script + Google Sheets" }
+      - { name: pengguna, label: Pengguna aplikasi, widget: string, required: false, hint: "Mis. Owner dan kasir" }
+      - { name: cover, label: Screenshot utama, widget: image, required: false, hint: "Upload screenshot asli aplikasi (rasio 16:10 paling pas). Kalau kosong, dipakai mockup bawaan." }
+      - name: mockup
+        label: Mockup bawaan (kalau belum ada screenshot)
+        widget: select
+        default: umum
+        options:
+          - { label: "Status meja / booking", value: meja }
+          - { label: "Titip jual ke warung", value: titip }
+          - { label: "Piutang pelanggan", value: piutang }
+          - { label: "Layar kasir", value: kasir }
+          - { label: "Laporan harian", value: laporan }
+          - { label: "Nota pengiriman / distribusi", value: distribusi }
+          - { label: "Dashboard umum", value: umum }
+      - name: warna
+        label: Warna latar
+        widget: select
+        default: biru
+        options: [hijau, cokelat, biru, magenta, emas, zaitun]
+      - { name: galeri, label: Galeri screenshot tambahan, widget: list, required: false, field: { name: gambar, label: Gambar, widget: image } }
+      - { name: unggulan, label: Tampilkan di beranda, widget: boolean, default: true }
+      - { name: urutan, label: Urutan tampil, widget: number, value_type: int, default: 99, hint: "Angka kecil tampil lebih dulu" }
+      - { name: body, label: Cerita lengkap, widget: markdown, hint: "Gunakan judul ## Tantangan, ## Solusi, ## Fitur utama" }
+
+  # ---------------- PRODUK ----------------
+  - name: produk
+    label: Produk Siap Pakai
+    label_singular: Produk
+    folder: src/content/produk
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{status}}"
+    fields:
+      - { name: title, label: Nama produk, widget: string }
+      - { name: tagline, label: Tagline, widget: string }
+      - { name: untuk, label: Cocok untuk, widget: text }
+      - { name: harga, label: Harga, widget: string, hint: "Mis. Rp1,5jt atau Hubungi kami" }
+      - { name: catatanHarga, label: Catatan harga, widget: string, required: false }
+      - { name: fitur, label: Daftar fitur, widget: list }
+      - { name: status, label: Status, widget: select, options: [Tersedia, Segera hadir], default: Tersedia }
+      - { name: cover, label: Screenshot utama, widget: image, required: false }
+      - name: mockup
+        label: Mockup bawaan
+        widget: select
+        default: kasir
+        options: [meja, titip, piutang, kasir, laporan, distribusi, umum]
+      - { name: warna, label: Warna latar, widget: select, default: biru, options: [hijau, cokelat, biru, magenta, emas, zaitun] }
+      - { name: urutan, label: Urutan tampil, widget: number, value_type: int, default: 99 }
+      - { name: body, label: Penjelasan lengkap, widget: markdown }
+
+  # ---------------- ARTIKEL ----------------
+  - name: artikel
+    label: Artikel
+    label_singular: Artikel
+    folder: src/content/artikel
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} ({{tanggal}})"
+    sortable_fields: [tanggal, title]
+    fields:
+      - { name: title, label: Judul, widget: string }
+      - { name: deskripsi, label: Deskripsi singkat, widget: text, hint: "Tampil di kartu artikel dan hasil Google (±150 karakter)." }
+      - { name: tanggal, label: Tanggal terbit, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { name: kategori, label: Kategori, widget: select, default: Tips UMKM, options: [Tips UMKM, Panduan, Cerita Klien, Kabar Ruftech] }
+      - { name: cover, label: Gambar sampul, widget: image, required: false }
+      - { name: penulis, label: Penulis, widget: string, default: Tim Ruftech }
+      - { name: draft, label: Simpan sebagai draft (belum tampil), widget: boolean, default: false }
+      - { name: body, label: Isi artikel, widget: markdown }
+
+  # ---------------- TESTIMONI ----------------
+  - name: testimoni
+    label: Testimoni Klien
+    label_singular: Testimoni
+    description: Tampil di beranda (dan di halaman karya terkait). Selama kosong, bagian testimoni tidak muncul.
+    folder: src/content/testimoni
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    identifier_field: nama
+    summary: "{{nama}} — {{usaha}}"
+    fields:
+      - { name: nama, label: Nama klien, widget: string, hint: "Mis. Ko Renhard" }
+      - { name: usaha, label: Nama usaha / jabatan, widget: string, hint: "Mis. Owner Katabond" }
+      - { name: kutipan, label: Isi testimoni, widget: text, hint: "Kutip kata-kata klien apa adanya (minta izin dulu)." }
+      - { name: foto, label: Foto klien, widget: image, required: false }
+      - { name: bukti, label: Screenshot chat / ulasan, widget: image, required: false, hint: "Samarkan nomor telepon sebelum upload." }
+      - { name: karya, label: "ID karya terkait (mis. udrinks, katabond)", widget: string, required: false }
+      - { name: tampil, label: Tampilkan, widget: boolean, default: true }
+      - { name: urutan, label: Urutan tampil, widget: number, value_type: int, default: 99 }
+
+  # ---------------- PENGATURAN ----------------
+  - name: pengaturan
+    label: Pengaturan Website
+    editor: { preview: false }
+    files:
+      - name: site
+        label: Info usaha & kontak
+        file: src/data/site.json
+        fields:
+          - { name: nama, label: Nama usaha, widget: string }
+          - { name: tagline, label: Tagline, widget: string }
+          - { name: deskripsi, label: Deskripsi (hero & Google), widget: text }
+          - { name: whatsapp, label: "Nomor WhatsApp (format 628…, tanpa + dan spasi)", widget: string }
+          - { name: whatsappTampil, label: Nomor WhatsApp untuk ditampilkan, widget: string }
+          - { name: instagram, label: Username Instagram (tanpa @), widget: string }
+          - { name: tiktok, label: Username TikTok (tanpa @), widget: string, required: false }
+          - { name: email, label: Email bisnis, widget: string, required: false }
+          - { name: kota, label: Kota, widget: string }
+          - { name: jamKerja, label: Jam kerja, widget: string }
+          - { name: jumlahKlien, label: Jumlah klien (angka), widget: number, value_type: int }
+          - name: founder
+            label: Founder (tampil di halaman Tentang bila nama diisi)
+            widget: object
+            fields:
+              - { name: nama, label: Nama, widget: string, required: false }
+              - { name: peran, label: Peran, widget: string, default: Founder Ruftech Solutions }
+              - { name: foto, label: Foto, widget: image, required: false }
+              - { name: cerita, label: Cerita singkat, widget: text, required: false }
+          - { name: ga4, label: "ID Google Analytics 4 (G-XXXXXXX), opsional", widget: string, required: false }
+      - name: kalkulator
+        label: Kalkulator estimasi harga
+        file: src/data/kalkulator.json
+        fields:
+          - { name: judul, label: Judul, widget: string }
+          - { name: catatan, label: Catatan di bawah estimasi, widget: text }
+          - name: dasar
+            label: Biaya dasar (selalu termasuk)
+            widget: object
+            fields:
+              - { name: nama, label: Nama, widget: string }
+              - { name: harga, label: Harga (angka), widget: number, value_type: int }
+              - { name: isi, label: Keterangan, widget: string }
+          - name: grup
+            label: Kelompok fitur
+            widget: list
+            summary: "{{nama}}"
+            fields:
+              - { name: nama, label: Nama kelompok, widget: string }
+              - name: item
+                label: Fitur
+                widget: list
+                summary: "{{nama}} — {{harga}}"
+                fields:
+                  - { name: id, label: "ID singkat (huruf kecil, tanpa spasi)", widget: string }
+                  - { name: nama, label: Nama fitur, widget: string }
+                  - { name: ket, label: Keterangan, widget: string }
+                  - { name: harga, label: Harga (angka), widget: number, value_type: int }
+          - name: preset
+            label: Tombol paket cepat
+            widget: list
+            summary: "{{nama}}"
+            fields:
+              - { name: nama, label: Nama paket, widget: string }
+              - { name: item, label: "ID fitur yang dicentang", widget: list }
+          - name: contoh
+            label: Tombol contoh jenis usaha
+            widget: list
+            required: false
+            summary: "{{nama}}"
+            fields:
+              - { name: nama, label: Jenis usaha, widget: string }
+              - { name: item, label: "ID fitur yang dicentang", widget: list }
+      - name: mitra
+        label: Logo mitra / klien
+        file: src/data/mitra.json
+        fields:
+          - { name: judul, label: Judul deretan, widget: string }
+          - name: daftar
+            label: Daftar mitra
+            widget: list
+            summary: "{{nama}}"
+            fields:
+              - { name: nama, label: Nama usaha, widget: string }
+              - { name: logo, label: "Logo (PNG transparan, landscape)", widget: image, required: false, hint: "Kalau kosong, nama usaha tampil sebagai teks. Minta izin klien sebelum memasang logonya." }
+              - { name: latar, label: "Warna latar kotak logo (mis. #ffffff)", widget: string, required: false, default: "#ffffff" }
+              - { name: karya, label: "ID karya terkait (opsional)", widget: string, required: false }
+      - name: harga
+        label: Paket harga
+        file: src/data/harga.json
+        fields:
+          - { name: catatan, label: Catatan di bawah paket, widget: text }
+          - name: paket
+            label: Paket
+            widget: list
+            summary: "{{nama}} — {{harga}}"
+            fields:
+              - { name: nama, label: Nama paket, widget: string }
+              - { name: harga, label: Harga, widget: string }
+              - { name: keterangan, label: Keterangan harga, widget: string, default: sekali bayar }
+              - { name: untuk, label: Cocok untuk, widget: string }
+              - { name: fitur, label: Fitur, widget: list }
+              - { name: unggulan, label: Tandai paling dipilih, widget: boolean, default: false }
+          - { name: garansi, label: "Poin garansi (tampil di halaman Harga bila diisi)", widget: list, required: false }
+          - name: custom
+            label: Paket custom
+            widget: object
+            fields:
+              - { name: judul, label: Judul, widget: string }
+              - { name: isi, label: Penjelasan, widget: text }

@@ -1,0 +1,17 @@
+/* artikeldetail: diawali .c-artikeldetail supaya gaya tidak bocor ke komponen lain */
+.c-artikeldetail .ah { font-size: clamp(32px, 4.6vw, 52px) !important; max-width: 22ch !important; }
+.c-artikeldetail .meta { font-size: 15px !important; color: var(--dim) !important; }
+.c-artikeldetail .cover { max-width: 980px; margin-bottom: 56px; }
+.c-artikeldetail .cover img { border-radius: 20px; border: 1px solid var(--line); width: 100%; }
+.c-artikeldetail .cols { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; max-width: 980px; }
+.c-artikeldetail .toc { position: sticky; top: 100px; display: grid; gap: 12px; }
+.c-artikeldetail .toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: 14px; }
+.c-artikeldetail .toc a { color: var(--muted); text-decoration: none; }
+.c-artikeldetail .toc a:hover { color: var(--accent); }
+.c-artikeldetail .prose h2 { scroll-margin-top: 100px; }
+.c-artikeldetail .prose > h2:first-child { margin-top: 0; }
+.c-artikeldetail .box { margin-top: 56px; padding: 32px; text-align: center; display: grid; gap: 12px; justify-items: center; background: linear-gradient(140deg, rgba(35,80,176,.2), rgba(138,43,255,.1)); }
+.c-artikeldetail .box h3 { font-size: 22px; }
+.c-artikeldetail .box p { color: var(--muted); }
+.c-artikeldetail .more-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 20px; }
+@media (max-width: 860px) { .c-artikeldetail .cols { grid-template-columns: 1fr; } .c-artikeldetail .toc { position: static; } .c-artikeldetail .more-grid { grid-template-columns: 1fr; } }
